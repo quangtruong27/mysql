@@ -13,10 +13,10 @@ select * from hoc_sinh where ho_ten_hs like '%Thị%' and ho_ten_hs not like '%T
 select * from hoc_sinh where ho_ten_hs like '% Thị %';
 
 --    e. Những học sinh có họ tên với độ dài là 30 ký tự (kể cả khoảng trắng).
-select * from hoc_sinh where length (ho_ten_hs) = 30;
+select * from hoc_sinh where char_length (ho_ten_hs) = 30;
 
 --    f. Những học sinh có họ tên với độ dài tối đa là 30 ký tự.
-select * from hoc_sinh where length (ho_ten_hs) <= 30;
+select * from hoc_sinh where char_length (ho_ten_hs) <= 30;
 
 --    g. Những học sinh có họ tên với độ dài tối đa là 30 ký tự và bắt đầu bằng ký tự N.
 select * from hoc_sinh where length (ho_ten_hs) <= 30 and ho_ten_hs like 'N%';
